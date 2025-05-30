@@ -1,33 +1,530 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San3y - الرئيسية</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>San3y - منصة لتوصيل المهنيين بالعملاء</title>
+    <meta name="description"
+        content="ابحث عن أفضل المهنيين في منطقتك، من سباكين إلى كهربائيين، نوفر لك كل ما تحتاجه بسهولة وسرعة." />
+    <meta name="keywords" content="San3y, مهنيين, خدمات منزلية, سباكة, كهرباء, نجارة, دهان, تبريد وتكييف" />
+    <meta name="author" content="San3y Team" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="assets/images/mstile-150x150.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-title" content="San3y" />
+    <meta name="application-name" content="San3y" />
+    <meta name="msapplication-tooltip" content="San3y - منصة لتوصيل المهنيين بالعملاء" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="San3y - منصة لتوصيل المهنيين بالعملاء" />
+    <meta name="twitter:description"
+        content="ابحث عن أفضل المهنيين في منطقتك، من سباكين إلى كهربائيين، نوفر لك كل ما تحتاجه بسهولة وسرعة." />
+    <meta name="twitter:image" content="assets/images/twitter-image.jpg" />
+    <meta property="og:title" content="San3y - منصة لتوصيل المهنيين بالعملاء" />
+    <meta property="og:description"
+        content="ابحث عن أفضل المهنيين في منطقتك، من سباكين إلى كهربائيين، نوفر لك كل ما تحتاجه بسهولة وسرعة." />
+    <meta property="og:image" content="assets/images/og-image.jpg" />
+    <meta property="og:url" content="https://www.san3y.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ar_SA" />
+    <meta property="og:site_name" content="San3y" />
+    <meta name="google-site-verification" content="your-google-site-verification-code" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <h2><span>San</span><span class="three">3</span><span>y</span></h2>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="#">عن الموقع</a></li>
-                <li><a href="#">المهنيين</a></li>
-                <li><a href="#">المدونة</a></li>
-            </ul>
-        </nav>
-        <div class="cta-btn">
-            <a href="#">سجل كمهني</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="header__logo">
+                <h2><span>San</span><span class="highlight">3</span><span>y</span></h2>
+            </a>
+
+            <button class="nav__toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav__links">
+                    <li><a href="#" class="nav__link nav__link--active">الرئيسية</a></li>
+                    <li><a href="#" class="nav__link">عن الموقع</a></li>
+                    <li><a href="#" class="nav__link">المهنيين</a></li>
+                    <li><a href="#" class="nav__link">المدونة</a></li>
+                </ul>
+                <a href="#" class="btn btn--secondary">سجل كمهني</a>
+            </nav>
         </div>
     </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">ابحث عن أفضل المهنيين في منطقتك</h1>
+                <p class="hero__subtitle">من الحرفيين إلى المتخصصين، نوفر لك أفضل الخبراء لتحصل على الخدمة المثالية التي
+                    تبحث عنها</p>
+                <form class="search-form">
+                    <div class="search-form__group">
+                        <label for="city">المدينة</label>
+                        <select id="city" name="city">
+                            <option value="">اختر المدينة</option>
+                            <option value="riyadh">الرياض</option>
+                            <option value="jeddah">جدة</option>
+                            <option value="dammam">الدمام</option>
+                        </select>
+                    </div>
+                    <div class="search-form__group">
+                        <label for="specialty">التخصص</label>
+                        <select id="specialty" name="specialty">
+                            <option value="">اختر التخصص</option>
+                            <option value="electrician">كهربائي</option>
+                            <option value="plumber">سباك</option>
+                            <option value="carpenter">نجار</option>
+                            <option value="painter">دهان</option>
+                            <option value="ac">تبريد وتكييف</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn--secondary">ابحث الآن</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="section how-it-works">
+            <div class="container">
+                <div class="section__title">
+                    <h2>كيف يعمل الموقع؟</h2>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <span class="step__number">1</span>
+                        <div class="step__icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h3 class="step__title">أنشئ حسابك</h3>
+                        <p class="step__description">أنشئ حسابك المجاني بخطوات بسيطة وابدأ رحلتك معنا</p>
+                    </div>
+                    <div class="step">
+                        <span class="step__number">2</span>
+                        <div class="step__icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="step__title">ابحث عن المهنيين</h3>
+                        <p class="step__description">ابحث عن المهنيين المتاحين في منطقتك حسب التخصص والمهارات</p>
+                    </div>
+                    <div class="step">
+                        <span class="step__number">3</span>
+                        <div class="step__icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3 class="step__title">احجز موعدك</h3>
+                        <p class="step__description">تواصل واحجز موعدك مباشرة مع المهني الذي تختاره</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section features">
+            <div class="container">
+                <div class="section__title">
+                    <h2>مميزات منصتنا</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">خدمات موثوقة</h3>
+                        <p class="feature-description">جميع المهنيين لدينا يتم التحقق منهم بعناية لضمان جودة الخدمات</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="feature-title">سرعة التنفيذ</h3>
+                        <p class="feature-description">تواصل مع المهنيين مباشرة واحصل على الخدمة في أسرع وقت</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <h3 class="feature-title">أسعار تنافسية</h3>
+                        <p class="feature-description">احصل على أفضل الأسعار مع ضمان الجودة من خلال منافسة المهنيين</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="feature-title">تقييمات حقيقية</h3>
+                        <p class="feature-description">تصفح تقييمات العملاء السابقين لاختيار المهني الأنسب لك</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professionals Section -->
+        <section class="section professionals">
+            <div class="container">
+                <div class="section__title">
+                    <h2>المهنيون المميزون</h2>
+                </div>
+
+                <div class="categories">
+                    <div class="category category--active" data-category="all">الجميع</div>
+                    <div class="category" data-category="plumbing">سباكة</div>
+                    <div class="category" data-category="electrical">كهرباء</div>
+                    <div class="category" data-category="carpentry">نجارة</div>
+                    <div class="category" data-category="painting">دهان</div>
+                    <div class="category" data-category="ac">تبريد وتكييف</div>
+                </div>
+
+                <div class="professionals-grid" id="professionalsContainer">
+                    <!-- Professionals will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section testimonials">
+            <div class="container">
+                <div class="section__title">
+                    <h2 style="color: var(--white);">آراء عملائنا</h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">
+                            "لقد وجدت أفضل سباك في منطقتي من خلال San3y، كانت الخدمة سريعة وممتازة وبسعر معقول. أنصح
+                            الجميع باستخدام المنصة!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="محمد عبدالله">
+                            </div>
+                            <div class="author-info">
+                                <h4>محمد عبدالله</h4>
+                                <p>عميل - الرياض</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">
+                            "وفرت علي San3y الكثير من الوقت والجهد في البحث عن فني تكييف محترف. الخدمة كانت ممتازة
+                            والفني كان محترفًا في عمله."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="سارة محمد">
+                            </div>
+                            <div class="author-info">
+                                <h4>سارة محمد</h4>
+                                <p>عميلة - جدة</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">
+                            "كنت بحاجة إلى كهربائي بشكل عاجل، وبفضل San3y وجدت محترفًا خلال دقائق وحل المشكلة في نفس
+                            اليوم. شكرًا لكم على هذه الخدمة الرائعة!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="خالد سعد">
+                            </div>
+                            <div class="author-info">
+                                <h4>خالد سعد</h4>
+                                <p>عميل - الدمام</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>من <span>نحن</span> في San3y؟</h2>
+                        <p>نحن منصة رائدة تهدف إلى ربط العملاء بالمهنيين المحترفين في مختلف المجالات. نسعى لتقديم تجربة
+                            سهلة وسريعة للعثور على أفضل الخبراء في منطقتك.</p>
+                        <p>تأسست San3y عام 2020 بمهمة بسيطة: جعل عملية العثور على الحرفيين والمهنيين المحترفين أسهل
+                            وأكثر موثوقية. اليوم، نخدم آلاف العملاء في جميع أنحاء المملكة.</p>
+
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">5,000+</div>
+                                <div class="stat-text">مهني مسجل</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100,000+</div>
+                                <div class="stat-text">خدمة مقدمة</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-text">رضا العملاء</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">25+</div>
+                                <div class="stat-text">مدينة مغطاة</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=2070&auto=format&fit=crop"
+                            alt="فريق San3y">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta__content">
+                    <h2 class="cta__title">هل أنت مهني وتريد زيادة دخلك؟</h2>
+                    <p class="cta__description">انضم إلى منصتنا وابدأ في الحصول على عملاء جدد من منطقتك اليوم</p>
+                    <a href="#" class="btn btn--secondary">سجل كمهني الآن</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3>عن San3y</h3>
+                    <p>منصة رائدة في مجال الربط بين العملاء والمهنيين المحترفين في مختلف المجالات، نسعى لتقديم تجربة
+                        مميزة للجميع.</p>
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__col">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer__links">
+                        <li><a href="#"><i class="fas fa-angle-left"></i> الرئيسية</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> عن الموقع</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> المهنيين</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> المدونة</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h3>فئات الخدمات</h3>
+                    <ul class="footer__links">
+                        <li><a href="#"><i class="fas fa-angle-left"></i> سباكة</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> كهرباء</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> نجارة</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> دهان</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> تبريد وتكييف</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h3>اتصل بنا</h3>
+                    <ul class="footer__links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</a></li>
+                        <li><a href="#"><i class="fas fa-phone"></i> +966 12 345 6789</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> info@san3y.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <p>جميع الحقوق محفوظة © 2023 San3y. تم التطوير بواسطة فريق San3y</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile navigation
+        const navToggle = document.querySelector('.nav__toggle');
+        const nav = document.querySelector('.nav');
+
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('nav--active');
+            const icon = navToggle.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile nav when clicking on a link
+        document.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav--active');
+                const icon = navToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Professionals data
+        const professionalsData = [
+            {
+                id: 1,
+                name: "أحمد محمد",
+                category: "plumbing",
+                categoryName: "سباكة",
+                rating: 4.5,
+                reviews: 42,
+                location: "الرياض، حي المروج",
+                image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2128&auto=format&fit=crop"
+            },
+            {
+                id: 2,
+                name: "خالد عبدالله",
+                category: "electrical",
+                categoryName: "كهرباء",
+                rating: 5,
+                reviews: 63,
+                location: "جدة، حي الصفا",
+                image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=2070&auto=format&fit=crop"
+            },
+            {
+                id: 3,
+                name: "سامي علي",
+                category: "ac",
+                categoryName: "تبريد وتكييف",
+                rating: 4,
+                reviews: 37,
+                location: "الدمام، حي الراكة",
+                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop"
+            },
+            {
+                id: 4,
+                name: "مصطفى حسن",
+                category: "carpentry",
+                categoryName: "نجارة",
+                rating: 4.7,
+                reviews: 28,
+                location: "الرياض، حي النخيل",
+                image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1976&auto=format&fit=crop"
+            },
+            {
+                id: 5,
+                name: "ياسر عبدالرحمن",
+                category: "painting",
+                categoryName: "دهان",
+                rating: 4.3,
+                reviews: 51,
+                location: "الدمام، حي الخليج",
+                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop"
+            },
+            {
+                id: 6,
+                name: "عمر فاروق",
+                category: "plumbing",
+                categoryName: "سباكة",
+                rating: 4.8,
+                reviews: 39,
+                location: "جدة، حي الروضة",
+                image: "https://images.unsplash.com/photo-1593104547480-9efb3c5f4a8b?q=80&w=1974&auto=format&fit=crop"
+            }
+        ];
+
+        // Render professionals
+        function renderProfessionals(category = 'all') {
+            const container = document.getElementById('professionalsContainer');
+            container.innerHTML = '';
+
+            const filteredProfessionals = category === 'all'
+                ? professionalsData
+                : professionalsData.filter(pro => pro.category === category);
+
+            filteredProfessionals.forEach(professional => {
+                const stars = [];
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= Math.floor(professional.rating)) {
+                        stars.push('<i class="fas fa-star"></i>');
+                    } else if (i === Math.ceil(professional.rating) && !Number.isInteger(professional.rating)) {
+                        stars.push('<i class="fas fa-star-half-alt"></i>');
+                    } else {
+                        stars.push('<i class="far fa-star"></i>');
+                    }
+                }
+
+                const card = document.createElement('div');
+                card.className = 'professional-card';
+                card.innerHTML = `
+                    <div class="professional-card__image">
+                        <img src="${professional.image}" alt="${professional.name}">
+                    </div>
+                    <div class="professional-card__content">
+                        <h3 class="professional-card__title">${professional.name}</h3>
+                        <span class="professional-card__category">${professional.categoryName}</span>
+                        <div class="professional-card__rating">
+                            ${stars.join('')}
+                            <span>(${professional.reviews} تقييم)</span>
+                        </div>
+                        <div class="professional-card__location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>${professional.location}</span>
+                        </div>
+                        <a href="#" class="btn btn--primary" style="width: 100%; padding: 10px;">عرض الملف</a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Initialize professionals
+        renderProfessionals();
+
+        // Category selection
+        document.querySelectorAll('.category').forEach(category => {
+            category.addEventListener('click', () => {
+                // Remove active class from all categories
+                document.querySelectorAll('.category').forEach(cat => {
+                    cat.classList.remove('category--active');
+                });
+
+                // Add active class to clicked category
+                category.classList.add('category--active');
+
+                // Filter professionals
+                const categoryType = category.getAttribute('data-category');
+                renderProfessionals(categoryType);
+            });
+        });
+    </script>
 </body>
 
 </html>
