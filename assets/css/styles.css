@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', Bold, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+}
+
+:root {
+    --primary-color: #0466c9;
+    --secondary-color: #e78b00;
+    --background-color: #F9F9F9;
+    --text-color: #111;
+}
+
+/* الهيدر */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    height: 10vh;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+
+}
+
+.logo:hover span {
+    color: var(--secondary-color);
+    transition: 0.3s ease;
+}
+
+.logo:hover span.three {
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease;
+
+    /* font-size: 2.3rem; */
+}
+
+.logo span.three {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 2.3rem;
+    transition: 0.3s ease;
+
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    /* المسافة بين النص والخط */
+    width: 0;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.cta-btn {
+    background-color: var(--secondary-color);
+    padding: 7px 17px;
+    border-radius: 5px;
+    border: 3px solid var(--secondary-color);
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #d77a0000; /* لون أغمق شوية كـ Hover effect */
+}
+
+.cta-btn a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.cta-btn:hover a {
+    color: #fff; /* ممكن تفضل أبيض، أو تغيّره لو حابب */
+}
