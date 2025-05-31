@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>San3y - محمد أحمد | سباك محترف</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        /* ========== Base Reset ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0466c9;
+            --primary-hover: #0352a1;
+            --primary-light: #e6f0ff;
+            --secondary: #e78b00;
+            --secondary-hover: #c57700;
+            --secondary-light: #fff4e0;
+            --accent: #00b894;
+            --white: #fff;
+            --light: #f8f9fa;
+            --gray-light: #f1f1f1;
+            --gray: #6c757d;
+            --dark: #212529;
+            --border-radius: 12px;
+            --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            --box-shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+            direction: rtl;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section__title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section__title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section__title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-weight: bold;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            font-size: 1.05rem;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        .btn--primary {
+            background-color: var(--primary);
+            color: var(--white);
+            border: 2px solid var(--primary);
+        }
+
+        .btn--primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .btn--outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--secondary);
+        }
+
+        .btn--outline:hover {
+            background-color: var(--secondary-hover);
+            border-color: var(--secondary-hover);
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .btn--secondary {
+            background-color: var(--secondary);
+            color: var(--white);
+            border: 2px solid var(--secondary);
+        }
+
+        .btn--secondary:hover {
+            background-color: var(--secondary-hover);
+            border-color: var(--secondary-hover);
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        /* ========== Header ========== */
+        .header {
+            background-color: var(--white);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .header__logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+
+        .header__logo h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            transition: var(--transition);
+        }
+
+        .header__logo:hover h2 span {
+            color: var(--secondary);
+            transition: var(--transition);
+
+        }
+
+        .header__logo:hover h2 span.highlight {
+            color: var(--primary);
+            transition: var(--transition);
+
+        }
+
+        .header__logo span.highlight {
+            color: var(--secondary);
+            font-weight: 800;
+            font-size: 2.1rem;
+            transition: var(--transition);
+
+        }
+
+        .nav__toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav__links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav__link {
+            color: var(--dark);
+            font-weight: 700;
+            position: relative;
+            padding: 8px 0;
+            transition: var(--transition);
+        }
+
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .nav__link:hover {
+            color: var(--primary);
+        }
+
+        .nav__link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .nav__link--active {
+            color: var(--primary);
+        }
+
+        .nav__link--active::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* ========== Professional Hero ========== */
+        .professional-hero {
+            background: linear-gradient(135deg, #0466c987 0%, #e78b0054 100%), url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            padding: 120px 0 80px;
+            color: var(--white);
+            position: relative;
+        }
+
+        .professional-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .professional-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .professional-image {
+            flex: 0 0 300px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            border: 5px solid var(--white);
+            height: 300px;
+        }
+
+        .professional-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .professional-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .professional-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .professional-category {
+            background: var(--secondary-light);
+            color: var(--secondary-hover);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .professional-location {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .professional-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+
+        .rating-stars {
+            color: var(--secondary);
+        }
+
+        .rating-value {
+            font-weight: bold;
+        }
+
+        .professional-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        /* ========== Professional Details ========== */
+        .professional-details {
+            background-color: var(--white);
+            padding: 80px 0;
+        }
+
+        .details-container {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 40px;
+        }
+
+        .about-section {
+            margin-bottom: 50px;
+        }
+
+        .section-heading {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 70px;
+            height: 3px;
+            background: var(--secondary);
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray);
+        }
+
+        .skills-section {
+            margin-bottom: 50px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-item {
+            background: var(--light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            font-weight: 700;
+        }
+
+        /* ========== Professional Posts ========== */
+        .professional-posts {
+            background-color: var(--light);
+            padding: 80px 0;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .post-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .post-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .post-card:hover .post-image img {
+            transform: scale(1.05);
+        }
+
+        .post-content {
+            padding: 25px;
+        }
+
+        .post-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .post-excerpt {
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--gray-light);
+            padding-top: 15px;
+        }
+
+        /* ========== Professional Reviews ========== */
+        .professional-reviews {
+            background-color: var(--white);
+            padding: 80px 0;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .author-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .review-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .review-rating {
+            color: var(--secondary);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .review-content {
+            color: var(--gray);
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* ========== Sidebar ========== */
+        .professional-sidebar {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            height: fit-content;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .sidebar-section:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .sidebar-heading {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+
+        .service-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .service-item:hover {
+            background: var(--primary-light);
+        }
+
+        .service-icon {
+            color: var(--secondary);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .stat-item {
+            background: var(--white);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* ========== Footer ========== */
+        .footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 70px 0 30px;
+        }
+
+        .footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer__col h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer__col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+        }
+
+        .footer__links li {
+            margin-bottom: 15px;
+        }
+
+        .footer__links a {
+            color: #ddd;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer__links a:hover {
+            color: var(--secondary);
+            transform: translateX(-5px);
+        }
+
+        .footer__social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer__social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .footer__social a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .footer__copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            color: #aaa;
+        }
+
+        /* ========== Responsive Design ========== */
+        @media (max-width: 992px) {
+            .details-container {
+                grid-template-columns: 1fr;
+            }
+
+            .professional-sidebar {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav__toggle {
+                display: block;
+            }
+
+            .nav {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                background: var(--white);
+                width: 280px;
+                height: calc(100vh - 80px);
+                flex-direction: column;
+                padding: 30px 20px;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+                z-index: 1000;
+            }
+
+            .nav--active {
+                right: 0;
+            }
+
+            .nav__links {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+
+            .professional-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .professional-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .professional-actions {
+                justify-content: center;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section__title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .professional-title {
+                font-size: 2rem;
+            }
+
+            .posts-grid,
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="header__logo">
+                <h2><span>San</span><span class="highlight">3</span><span>y</span></h2>
+            </a>
+
+            <button class="nav__toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav__links">
+                    <li><a href="#" class="nav__link">الرئيسية</a></li>
+                    <li><a href="#" class="nav__link">عن الموقع</a></li>
+                    <li><a href="#" class="nav__link nav__link--active">المهنيين</a></li>
+                    <li><a href="#" class="nav__link">المدونة</a></li>
+                </ul>
+                <a href="#" class="btn btn--secondary">سجل كمهني</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Professional Hero Section -->
+        <section class="professional-hero">
+            <div class="container professional-container">
+                <div class="professional-image">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2128&auto=format&fit=crop"
+                        alt="محمد أحمد">
+                </div>
+
+                <div class="professional-info">
+                    <h1 class="professional-title">محمد أحمد</h1>
+                    <span class="professional-category">سباك محترف</span>
+
+                    <div class="professional-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>الرياض، حي المروج</span>
+                        <i class="fas fa-eye"></i>
+                        <span>20</span>
+                    </div>
+
+                    <div class="professional-rating">
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="rating-value">4.5 (42 تقييم)</div>
+                    </div>
+
+                    <div class="professional-actions">
+                        <a href="#" class="btn btn--primary">تواصل الآن</a>
+                        <a href="#" class="btn btn--outline">طلب خدمة</a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Details Section -->
+        <section class="professional-details">
+            <div class="container details-container">
+                <div class="main-content">
+                    <div class="about-section">
+                        <h2 class="section-heading">نبذة عني</h2>
+                        <p class="about-content">
+                            أنا محمد أحمد، سباك محترف مع أكثر من 12 سنة من الخبرة في مجال السباكة المنزلية والتجارية.
+                            تخصصي يشمل إصلاح التسريبات، تركيب التوصيلات الصحية، وصيانة أنظمة المياه. أحمل شهادات معتمدة
+                            في مجال السباكة وألتزم بأعلى معايير الجودة والسلامة.
+                            <br><br>
+                            أؤمن بتقديم خدمات مميزة للعملاء مع ضمان الدقة في المواعيد والشفافية في الأسعار. عملي يتميز
+                            بالاحترافية والاهتمام بالتفاصيل لضمان رضا العملاء الكامل. لدي فريق متخصص يساعدني في المشاريع
+                            الكبيرة لضمان إنجاز العمل في الوقت المحدد وبجودة عالية.
+                        </p>
+                    </div>
+
+                    <div class="skills-section">
+                        <h2 class="section-heading">خدماتي المتخصصة</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-faucet"></i>
+                                </div>
+                                <h3 class="skill-name">إصلاح التسريبات</h3>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-toilet"></i>
+                                </div>
+                                <h3 class="skill-name">تركيب التواليت</h3>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-shower"></i>
+                                </div>
+                                <h3 class="skill-name">تركيب الدش</h3>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-water"></i>
+                                </div>
+                                <h3 class="skill-name">صيانة سخانات المياه</h3>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-wrench"></i>
+                                </div>
+                                <h3 class="skill-name">إصلاح الأنابيب</h3>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-tint"></i>
+                                </div>
+                                <h3 class="skill-name">تركيب أنظمة الري</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Professional Posts Section -->
+                    <section class="professional-posts">
+                        <h2 class="section-heading">أعمالي ومنشوراتي</h2>
+                        <div class="posts-grid">
+                            <div class="post-card">
+                                <div class="post-image">
+                                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop"
+                                        alt="تركيب دش">
+                                </div>
+                                <div class="post-content">
+                                    <h3 class="post-title">تركيب دش حديث</h3>
+                                    <p class="post-excerpt">قمت مؤخراً بتركيب دش حديث في فيلا بمنطقة المروج، باستخدام
+                                        أحدث التقنيات وأفضل المواد لضمان جودة العمل وديمومته.</p>
+                                    <div class="post-meta">
+                                        <span><i class="far fa-calendar"></i> 15 مايو 2023</span>
+                                        <span><i class="far fa-eye"></i> 20</span>
+                                        <span><i class="far fa-heart"></i> 24</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="post-card">
+                                <div class="post-image">
+                                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop"
+                                        alt="إصلاح تسريبات">
+                                </div>
+                                <div class="post-content">
+                                    <h3 class="post-title">إصلاح تسريبات المياه</h3>
+                                    <p class="post-excerpt">عملية إصلاح تسريبات المياه في مجمع سكني، حيث تم اكتشاف تسرب
+                                        خفي تسبب في ارتفاع فواتير المياه بشكل ملحوظ.</p>
+                                    <div class="post-meta">
+                                        <span><i class="far fa-calendar"></i> 2 أبريل 2023</span>
+                                        <span><i class="far fa-heart"></i> 18</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="post-card">
+                                <div class="post-image">
+                                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1976&auto=format&fit=crop"
+                                        alt="صيانة سخان">
+                                </div>
+                                <div class="post-content">
+                                    <h3 class="post-title">صيانة سخان مياه</h3>
+                                    <p class="post-excerpt">صيانة سخان مياه منزلي بعد توقف مفاجئ، حيث تم اكتشاف مشكلة في
+                                        الترموستات واستبداله بآخر جديد لضمان سلامة العملاء.</p>
+                                    <div class="post-meta">
+                                        <span><i class="far fa-calendar"></i> 20 مارس 2023</span>
+                                        <span><i class="far fa-heart"></i> 32</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Professional Reviews Section -->
+                    <section class="professional-reviews">
+                        <h2 class="section-heading">تقييمات العملاء</h2>
+                        <div class="reviews-grid">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-author">
+                                        <div class="author-avatar">
+                                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="عبدالله">
+                                        </div>
+                                        <div class="author-info">
+                                            <h4>عبدالله السبيعي</h4>
+                                            <div class="review-date">12 يونيو 2023</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="review-content">
+                                    "محمد محترف جداً في عمله، أصلح تسرب المياه في منزلي بسرعة ودقة. الأسعار معقولة
+                                    والخدمة ممتازة. أنصح الجميع بالتعامل معه."
+                                </p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-author">
+                                        <div class="author-avatar">
+                                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="نورة">
+                                        </div>
+                                        <div class="author-info">
+                                            <h4>نورة الفهد</h4>
+                                            <div class="review-date">28 مايو 2023</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                                <p class="review-content">
+                                    "استفدت من خدمة تركيب الدش، العمل كان نظيفاً ودقيقاً. محمد كان مهذباً ومحترفاً في
+                                    التعامل. أوصي به بشدة لأي خدمات سباكة."
+                                </p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-author">
+                                        <div class="author-avatar">
+                                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="خالد">
+                                        </div>
+                                        <div class="author-info">
+                                            <h4>خالد الرشيد</h4>
+                                            <div class="review-date">15 أبريل 2023</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="review-content">
+                                    "أفضل سباك تعاملت معه! أصلح مشكلة في سخان الماء كانت معقدة، وشرح لي المشكلة بطريقة
+                                    واضحة. الأسعار مناسبة وجودة العمل ممتازة."
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Professional Sidebar -->
+                <div class="professional-sidebar">
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-heading">معلومات الاتصال</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <span>+966 50 123 4567</span>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <span>mohamed@san3y.com</span>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <span>الرياض، حي المروج، شارع الملك فهد</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-heading">الخدمات المقدمة</h3>
+                        <div class="service-list">
+                            <div class="service-item">
+                                <i class="fas fa-check-circle service-icon"></i>
+                                <span>إصلاح تسريبات المياه</span>
+                            </div>
+
+                            <div class="service-item">
+                                <i class="fas fa-check-circle service-icon"></i>
+                                <span>تركيب التواليت والدش</span>
+                            </div>
+
+                            <div class="service-item">
+                                <i class="fas fa-check-circle service-icon"></i>
+                                <span>صيانة سخانات المياه</span>
+                            </div>
+
+                            <div class="service-item">
+                                <i class="fas fa-check-circle service-icon"></i>
+                                <span>تركيب أنظمة الري</span>
+                            </div>
+
+                            <div class="service-item">
+                                <i class="fas fa-check-circle service-icon"></i>
+                                <span>إصلاح الأنابيب والتوصيلات</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-heading">إحصائيات</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">12+</div>
+                                <div class="stat-label">سنوات خبرة</div>
+                            </div>
+
+                            <div class="stat-item">
+                                <div class="stat-number">420+</div>
+                                <div class="stat-label">مشروع منجز</div>
+                            </div>
+
+                            <div class="stat-item">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">رضا العملاء</div>
+                            </div>
+
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">خدمة طوارئ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3>عن San3y</h3>
+                    <p>منصة رائدة في مجال الربط بين العملاء والمهنيين المحترفين في مختلف المجالات، نسعى لتقديم تجربة
+                        مميزة للجميع.</p>
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__col">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer__links">
+                        <li><a href="#"><i class="fas fa-angle-left"></i> الرئيسية</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> عن الموقع</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> المهنيين</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> المدونة</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h3>فئات الخدمات</h3>
+                    <ul class="footer__links">
+                        <li><a href="#"><i class="fas fa-angle-left"></i> سباكة</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> كهرباء</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> نجارة</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> دهان</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> تبريد وتكييف</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h3>اتصل بنا</h3>
+                    <ul class="footer__links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</a></li>
+                        <li><a href="#"><i class="fas fa-phone"></i> +966 12 345 6789</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> info@san3y.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <p>جميع الحقوق محفوظة © 2023 San3y. تم التطوير بواسطة فريق San3y</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile navigation
+        const navToggle = document.querySelector('.nav__toggle');
+        const nav = document.querySelector('.nav');
+
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('nav--active');
+            const icon = navToggle.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile nav when clicking on a link
+        document.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav--active');
+                const icon = navToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+
+</html>
